@@ -30,3 +30,8 @@ fi
 if [ -d "$HOME/.cargo/bin" ] ; then
     PATH="$HOME/.cargo/bin:$PATH"
 fi
+
+# npm global packages in user home
+if [ -d "$HOME/.npm-global/bin" ] ; then
+    export PATH=~/.npm-global/bin:$PATH
+fi

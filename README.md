@@ -3,3 +3,5 @@
 Apps/Files:
  - Tmux
  - inputrc
+ - bashrc
+ - sysctl.conf # needs revision

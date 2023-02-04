@@ -26,6 +26,7 @@ source /usr/share/virtualenvwrapper/virtualenvwrapper.sh
 
 # my alias
 alias update='sudo aptitude update && sudo aptitude upgrade -f && flatpak update'
+alias clean='sudo apt autopurge -y && sudo apt autoclean && flatpak uninstall --unused' # Be aware that not all deb systems have autopurge. Use autoremove instead.
 # odoo repositories related alias
 alias git-pull-all='find . -mindepth 1 -maxdepth 1 -type d -print -exec git -C {} pull \;'
 alias pip-install-all='find . -iname requirements.txt -exec pip install -r {} \;' 

@@ -40,3 +40,9 @@ set hlsearch
 
 " Show current mode.
 set showmode
+
+" Enable auto completion menu after pressing TAB.
+set wildmenu
+
+" Make wildmenu behave like similar to Bash completion.
+set wildmode=list:longest

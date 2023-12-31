@@ -63,3 +63,17 @@ rga-fzf() {
 	echo "opening $file" &&
 	xdg-open "$file"
 }
+
+# unlock gnome keyring in wsl headless 
+function unkey ()
+{
+    read -rsp "Password: " pass
+    export $(echo -n "$pass" | gnome-keyring-daemon --replace --unlock)
+    unset pass
+}
+
+# change to system user with bash
+function systemuser ()
+{
+    sudo su - $1 -s /bin/bash
+}
